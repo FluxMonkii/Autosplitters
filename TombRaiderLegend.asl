@@ -1,7 +1,8 @@
 // Tomb Raider: Legend Autosplitter for Livesplit
 // Special thanks to: SmoothOperative (twitter.com/tippysparkle) and Cadarev (twitter.com/cadarevelry)
 // Author: FluxMonkii (twitter.com/fluxmonkii)
-// Version 1.1 <3
+// Contributor: BryNu
+// Version 1.1.1 <3
 
 state("trl")
 {
@@ -70,6 +71,18 @@ isLoading
 
 startup
 {
+	if (timer.CurrentTimingMethod == TimingMethod.RealTime)
+	{        
+  		var timingMessage = MessageBox.Show(
+  		"This game uses Game Time (without loads) as the main timing method. " +
+  		"LiveSplit is currently set to display and compare against Real Time (including loads).\n\n" +
+  		"Would you like the timing method to be set to Game Time?",
+  		"Tomb Raider Legend | LiveSplit",
+  		MessageBoxButtons.YesNo,MessageBoxIcon.Question
+  		);
+  		if (timingMessage == DialogResult.Yes)
+    		timer.CurrentTimingMethod = TimingMethod.GameTime;
+	}
 	settings.Add("split", true, "Split at the end of:");
 	settings.Add("bolivia", true, "Bolivia", "split");
 	settings.Add("peru", true, "Peru", "split");
