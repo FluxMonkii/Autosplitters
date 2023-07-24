@@ -1,8 +1,8 @@
 // Tomb Raider: Legend Autosplitter for Livesplit
-// Special thanks to: SmoothOperative (twitter.com/tippysparkle) and Cadarev (twitter.com/cadarevelry)
-// Author: FluxMonkii (twitter.com/fluxmonkii)
+// Special thanks to: SmoothOperative and Cadarev
+// Author: FluxMonkii
 // Contributor: BryNu
-// Version 1.1.1 <3
+// Version 1.1.2 <3
 
 state("trl")
 {
